@@ -1,0 +1,11 @@
+<div class="game-container">
+    <div class="game-card" *ngFor="let game of games">
+      <img [src]="game.image" alt="{{ game.name }}">
+      <h3>{{ game.name }}</h3>
+      <p>Price: ${{ game.price }}</p>
+      <!-- <button>Add to Cart</button> -->
+      <button (click)="addToCart(game)">Add to Cart</button>
+
+    </div>
+  </div>
+  
