@@ -1,33 +1,17 @@
 import { Injectable } from '@angular/core';
 
-interface CartItem {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-  quantity: number;
-}
-
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-  private cart: CartItem[] = [];
+  private cart: any[] = [];
 
-  addToCart(game: CartItem) {
-    let existingItem = this.cart.find(item => item.id === game.id);
-    if (existingItem) {
-      existingItem.quantity++;
-    } else {
-      this.cart.push({ ...game, quantity: 1 });
-    }
+  addToCart(game: any) {
+    this.cart.push(game);
+    console.log('Cart:', this.cart); // Debugging line
   }
 
-  getCartItems() {
+  getCart() {
     return this.cart;
-  }
-
-  clearCart() {
-    this.cart = [];
   }
 }
