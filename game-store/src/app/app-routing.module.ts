@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GameListComponent } from './game-list/game-list.component';
-import { CartComponent } from './cart/cart.component';
-import { CheckoutComponent } from './checkout/checkout.component';
+import { HomeComponent } from './pages/home/home.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
-  { path: '', component: GameListComponent },
+  { path: '', component: HomeComponent },
   { path: 'cart', component: CartComponent },
-  { path: 'checkout', component: CheckoutComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({
